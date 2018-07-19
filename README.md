@@ -1,4 +1,4 @@
-# ResearchAndDevelopment
+# Research & Development
 
 Place acting as programming playground with various experiments and other efforts.
 
