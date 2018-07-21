@@ -4,3 +4,6 @@ Place acting as programming playground with various experiments and other effort
 
 ## WebGL
 WebGL, three.js
+
+## Ruby on Rails
+Sample application with the most common and desired features.
