@@ -78,6 +78,8 @@ Import took 2720s and it is around 2GB of PostgreSQL data.
 
 ## Rendering
 
+### Preparation
+
 Install some packages:
 
 ```
@@ -88,12 +90,16 @@ libcairo-dev libcairomm-1.0-dev apache2 apache2-dev libagg-dev liblua5.2-dev ttf
 liblua5.1-dev libgeotiff-epsg curl
 ```
 
+### Mapnik
+
 ```Mapnik``` installation:
 
 ```
 apt-get install autoconf apache2-dev libtool libxml2-dev libbz2-dev libgeos-dev libgeos++-dev \
 libproj-dev gdal-bin libmapnik-dev mapnik-utils python-mapnik
 ```
+
+### mod_tile and renderd
 
 ```mod_tile``` and ```renderd``` installation:
 
@@ -124,3 +130,45 @@ converting ```mml``` into ```xml```:
 ```
 carto project.mml > mapnik.xml
 ```
+
+download shape files:
+
+```
+cd
+cd osm/openstreetmap-carto/scripts
+./get-shapefiles.py
+```
+
+```renderd``` configuration edit with appropriate number of cores ```/usr/local/etc/renderd.conf```.
+
+### Apache
+
+configure ```Apache```:
+
+```
+mkdir /var/lib/mod_tile
+chown renderaccount /var/lib/mod_tile
+mkdir /var/run/renderd
+chown renderaccount /var/run/renderd
+```
+
+edit ```/etc/apache2/conf-available/mod_tile.conf``` with the following:
+
+```
+LoadModule tile_module /usr/lib/apache2/modules/mod_tile.so
+```
+
+and run ```a2enconf mod_tile```
+
+edit ```/etc/apache2/sites-available/000-default.conf``` adding 
+
+```
+LoadTileConfigFile /usr/local/etc/renderd.conf
+ModTileRenderdSocketName /var/run/renderd/renderd.sock
+# Timeout before giving up for a tile to be rendered
+ModTileRequestTimeout 0
+# Timeout before giving up for a tile to be rendered that is otherwise missing
+ModTileMissingRequestTimeout 30
+```
+
+between ```ServerAdmin``` and ```DocumentRoot```.
