@@ -4,7 +4,7 @@
 Running on ```HP Pavilion x2 with Intel(R) Atom(TM) CPU Z3736F@ 1.33GHz``` and ```2GB``` of RAM. First, installed ```VirtualBox```. Then took ```ubuntu-18.04-live-server-amd64``` ISO image, install and start it. You need to switch to bridged networking in order to get access to services running in the VM. 
 
 ## Elasticsearch
-Installed ```elasticserach``` version ```5.6.10``` from the official manual. Packages are as follows:
+First, installed Java 8. Then, installed ```elasticserach``` version ```5.6.10``` from the official manual. Packages are as follows:
 
 ```
 root@ubuntu:/home/michal# apt list | grep elastic
@@ -31,3 +31,5 @@ ruby-elasticsearch-api/bionic 1.0.12-1 all
 ruby-elasticsearch-transport/bionic 1.0.12-1 all
 ruby-rails-assets-jakobmattsson-jquery-elastic/bionic 1.6.11~dfsg-1 all
 ```
+
+As there is little memory, I set up only 64 MB for ```ms``` and ```mx``` JVM properties.
