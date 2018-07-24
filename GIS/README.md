@@ -49,3 +49,12 @@ mkdir osm
 cd osm
 git clone https://github.com/gravitystorm/openstreetmap-carto.git
 ```
+
+# OSM PBF data
+We need to get some data to work with:
+
+```
+cd ~/osm
+https://download.geofabrik.de/europe/poland/lubelskie-latest.osm.pbf
+```
+
