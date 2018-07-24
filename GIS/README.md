@@ -63,6 +63,7 @@ https://download.geofabrik.de/europe/poland/lubelskie-latest.osm.pbf
 Import data:
 
 ```
+sudo -u postgres -i
 osm2pgsql --create \
 --slim \
 --cache 128 --number-processes 1 --hstore \
