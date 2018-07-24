@@ -172,3 +172,5 @@ ModTileMissingRequestTimeout 30
 ```
 
 between ```ServerAdmin``` and ```DocumentRoot```.
+
+reload ```Apache``` with ```service apache2 reload```
