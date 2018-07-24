@@ -110,3 +110,17 @@ make install
 make install-mod_tile
 ldconfig
 ```
+
+stylesheets additional installation:
+
+```
+apt install npm nodejs
+npm install -g carto
+carto -v 
+```
+
+converting ```mml``` into ```xml```:
+
+```
+carto project.mml > mapnik.xml
+```
