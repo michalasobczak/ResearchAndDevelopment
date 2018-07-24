@@ -1,5 +1,8 @@
 # GIS
 
+## Introduction
+The following should be quite precise however it is made of several authors so there might be slight inconsistencies. First imported data into database and then installed all the rest.
+
 ## OS installation
 Running on ```HP Pavilion x2 with Intel(R) Atom(TM) CPU Z3736F@ 1.33GHz``` and ```2GB``` of RAM. First, installed ```VirtualBox```. Then took ```ubuntu-18.04-live-server-amd64``` ISO image, install and start it. You need to switch to bridged networking in order to get access to services running in the VM. 
 
