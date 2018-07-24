@@ -88,9 +88,25 @@ libcairo-dev libcairomm-1.0-dev apache2 apache2-dev libagg-dev liblua5.2-dev ttf
 liblua5.1-dev libgeotiff-epsg curl
 ```
 
-and
+```Mapnik``` installation:
 
 ```
 apt-get install autoconf apache2-dev libtool libxml2-dev libbz2-dev libgeos-dev libgeos++-dev \
 libproj-dev gdal-bin libmapnik-dev mapnik-utils python-mapnik
+```
+
+```mod_tile``` and ```renderd``` installation:
+
+```
+cd 
+mkdir src
+cd src
+git clone -b switch2osm git://github.com/SomeoneElseOSM/mod_tile.git
+cd mod_tile
+./autogen.sh
+./configure
+make
+make install
+make install-mod_tile
+ldconfig
 ```
