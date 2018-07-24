@@ -12,7 +12,7 @@ First, installed Java 8. Then, installed ```elasticserach``` version ```5.6.10``
 /etc/elasticsearch/jvm.options
 ```
 
-Remember to add firewall rules. Please take note that elasticsearch does not work on 32 bits officially.
+Remember to add firewall rules. Please take note that ```elasticsearch``` does not work on 32 bits OS officially.
 
 
 ## Switch to OSM
