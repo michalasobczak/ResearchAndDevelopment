@@ -20,6 +20,7 @@ apt-get --no-install-recommends install -y postgresql-10-postgis-2.4 postgresql-
 add-apt-repository -y ppa:kakrueger/openstreetmap
 apt-get update
 apt-get --no-install-recommends install -y osm2pgsql osmctools
+apt-get install postgresql-10-postgis-2.4-scripts
 ```
 
 Configure ```overcommit```:
