@@ -71,3 +71,5 @@ osm2pgsql --create \
 /home/michal/osm/lubelskie-latest.osm.pbf \
 -d gis -U postgres
 ```
+
+Import took 2720s and it is around 2GB of PostgreSQL data.
