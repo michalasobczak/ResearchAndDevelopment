@@ -32,3 +32,10 @@ vm.overcommit_memory=1
 EOF
 sudo sysctl -p /etc/sysctl.d/60-overcommit.conf
 ```
+
+Initialize database:
+```
+sudo -u postgres createuser -s $USER
+createdb gis
+psql -d gis -c 'CREATE EXTENSION hstore; CREATE EXTENSION postgis;'
+```
