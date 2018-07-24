@@ -20,5 +20,14 @@ apt-get --no-install-recommends install -y postgresql-10-postgis-2.4 postgresql-
 add-apt-repository -y ppa:kakrueger/openstreetmap
 apt-get update
 apt-get --no-install-recommends install -y osm2pgsql osmctools
+```
 
+Configure ```overcommit```:
+
+```
+sudo tee /etc/sysctl.d/60-overcommit.conf <<EOF
+# Overcommit settings to allow faster osm2pgsql imports
+vm.overcommit_memory=1
+EOF
+sudo sysctl -p /etc/sysctl.d/60-overcommit.conf
 ```
