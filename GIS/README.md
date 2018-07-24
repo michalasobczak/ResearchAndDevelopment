@@ -34,8 +34,18 @@ sudo sysctl -p /etc/sysctl.d/60-overcommit.conf
 ```
 
 Initialize database:
+
 ```
 sudo -u postgres createuser -s $USER
 createdb gis
 psql -d gis -c 'CREATE EXTENSION hstore; CREATE EXTENSION postgis;'
+```
+
+Get some stylesheets:
+
+```
+cd
+mkdir osm
+cd osm
+git clone https://github.com/gravitystorm/openstreetmap-carto.git
 ```
