@@ -36,7 +36,6 @@ sudo sysctl -p /etc/sysctl.d/60-overcommit.conf
 Initialize database:
 
 ```
-sudo -u postgres createuser -s $USER
 createdb gis
 psql -d gis -c 'CREATE EXTENSION hstore; CREATE EXTENSION postgis;'
 ```
@@ -58,3 +57,14 @@ cd ~/osm
 https://download.geofabrik.de/europe/poland/lubelskie-latest.osm.pbf
 ```
 
+Import data:
+
+```
+osm2pgsql --create \
+--slim \
+--cache 128 --number-processes 1 --hstore \
+--style /home/michal/osm/openstreetmap-carto/openstreetmap-carto.style \
+--multi-geometry \
+/home/michal/osm/lubelskie-latest.osm.pbf \
+-d gis -U postgres
+```
