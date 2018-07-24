@@ -3,6 +3,7 @@
 ## OS installation
 Running on ```HP Pavilion x2 with Intel(R) Atom(TM) CPU Z3736F@ 1.33GHz``` and ```2GB``` of RAM. First, installed ```VirtualBox```. Then took ```ubuntu-18.04-live-server-amd64``` ISO image, install and start it. You need to switch to bridged networking in order to get access to services running in the VM. 
 
+
 ## Elasticsearch
 First, installed Java 8. Then, installed ```elasticserach``` version ```5.6.10``` from the official manual. Install Kibana. As there is little memory, I set up only 64 MB for ```ms``` and ```mx``` JVM properties. Configure the following:
 ```
@@ -11,7 +12,8 @@ First, installed Java 8. Then, installed ```elasticserach``` version ```5.6.10``
 /etc/elasticsearch/jvm.options
 ```
 
-Remember to add firewall rules.
+Remember to add firewall rules. Please take note that elasticsearch does not work on 32 bits officially.
+
 
 ## Switch to OSM
 ```
@@ -48,6 +50,7 @@ mkdir osm
 cd osm
 git clone https://github.com/gravitystorm/openstreetmap-carto.git
 ```
+
 
 ## OSM PBF data
 We need to get some data to work with:
