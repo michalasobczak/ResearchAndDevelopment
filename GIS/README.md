@@ -15,7 +15,7 @@ Remember to add firewall rules.
 
 ## Switch to OSM
 ```
-sudo apt-get --no-install-recommends -y install git unzip curl build-essential software-properties-common
-sudo apt-get --no-install-recommends install -y postgresql-10-postgis-2.4 postgresql-contrib-10 proj-bin libgeos-dev
+apt-get --no-install-recommends -y install git unzip curl build-essential software-properties-common
+apt-get --no-install-recommends install -y postgresql-10-postgis-2.4 postgresql-contrib-10 proj-bin libgeos-dev
 
 ```
