@@ -117,21 +117,20 @@ make install-mod_tile
 ldconfig
 ```
 
-stylesheets additional installation:
+Stylesheets additional installation:
 
 ```
 apt install npm nodejs
 npm install -g carto
-carto -v 
 ```
 
-converting ```mml``` into ```xml```:
+Converting ```mml``` into ```xml```:
 
 ```
 carto project.mml > mapnik.xml
 ```
 
-download shape files:
+Download shape files:
 
 ```
 cd
@@ -143,7 +142,7 @@ cd osm/openstreetmap-carto/scripts
 
 ### Apache
 
-configure ```Apache```:
+Configure ```Apache```:
 
 ```
 mkdir /var/lib/mod_tile
@@ -152,15 +151,15 @@ mkdir /var/run/renderd
 chown renderaccount /var/run/renderd
 ```
 
-edit ```/etc/apache2/conf-available/mod_tile.conf``` with the following:
+Edit ```/etc/apache2/conf-available/mod_tile.conf``` with the following:
 
 ```
 LoadModule tile_module /usr/lib/apache2/modules/mod_tile.so
 ```
 
-and run ```a2enconf mod_tile```
+and then run ```a2enconf mod_tile```
 
-edit ```/etc/apache2/sites-available/000-default.conf``` adding 
+Edit ```/etc/apache2/sites-available/000-default.conf``` by adding:
 
 ```
 LoadTileConfigFile /usr/local/etc/renderd.conf
@@ -171,6 +170,30 @@ ModTileRequestTimeout 0
 ModTileMissingRequestTimeout 30
 ```
 
-between ```ServerAdmin``` and ```DocumentRoot```.
+between ```ServerAdmin``` and ```DocumentRoot```. Reload ```Apache``` with ```service apache2 reload```
 
-reload ```Apache``` with ```service apache2 reload```
+### System user
+
+```
+useradd -m renderaccount
+passwd renderaccount
+```
+
+Move ```openstreetmap-carto``` into ```/home/renderaccount/src```. ```chown``` it appropriately.
+
+### PostgreSQL configuration
+
+Change ```postgres``` user password.
+
+Make ```renderaccount``` superuser and owner of everything in the ```gis``` database. 
+
+On order to accomplish this run:
+```
+REASSIGN OWNED BY xyz TO renderaccount
+```
+
+where ```xyz``` is account name previously owning ```gis``` database.
+
+### Usage
+
+```hot/14/9214/5456.png```
