@@ -191,6 +191,22 @@ REASSIGN OWNED BY xyz TO renderaccount
 
 where ```xyz``` is account name previously owning ```gis``` database (something like your regular user account).
 
+## Runtime
+You can either start process manually with ```renderd -f -c /usr/local/etc/renderd.conf``` after ```sudo -u renderaccount -i``` or install ```renderd``` as a system service. To know which init system your system runs type ```ps -p 1```. ```Ubuntu``` runs ```systemd```. To install ```renderd```:
+
+```
+cp ~/src/mod_tile/debian/renderd.init /etc/init.d/renderd
+chmod u+x /etc/init.d/renderd
+cp ~/src/mod_tile/debian/renderd.service /lib/systemd/system/
+```
+
+To start it up and enable on startup:
+
+```
+/etc/init.d/renderd start
+systemctl enable renderd
+```
+
 ## Usage
 Append the following to your VM IP address running ```Apache``` to streamline the rendering process:
 
