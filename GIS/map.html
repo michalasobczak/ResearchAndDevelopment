@@ -14,7 +14,7 @@
   function initmap() {
     map = new L.Map('map');
     var osmUrl='http://192.168.0.24/hot/{z}/{x}/{y}.png';
-    var osmAttrib='Map data ÂŠ <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
+    var osmAttrib='map data (c) <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
     var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});		
   map.setView(new L.LatLng(51, 22.5),9);
   map.addLayer(osm);
