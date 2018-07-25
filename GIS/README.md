@@ -126,6 +126,8 @@ npm install -g carto
 
 Converting ```mml``` into ```xml```:
 ```
+cd
+cd osm
 carto project.mml > mapnik.xml
 ```
 
