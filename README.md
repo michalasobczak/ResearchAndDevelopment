@@ -9,4 +9,4 @@ WebGL, three.js
 Sample application with the most common and desired features.
 
 ## GIS
-OpenSteetMap experiments.
+OpenStreetMap experiments.
