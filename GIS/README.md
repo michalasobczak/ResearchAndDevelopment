@@ -207,6 +207,21 @@ To start it up and enable on startup:
 systemctl enable renderd
 ```
 
+## Additional configuration
+In case there is little amount of space and we need more add it first in ```VirtualBox``` and then do the following:
+```
+fdisk /dev/sdX
+ n
+ p
+ ...
+ w
+ q 
+partprobe /dev/sdX
+mkfs /dev/sdX -t ext4
+mkdir /mnt/sdX
+mount /dev/sdX /mnt/sdX -t ext4
+```
+
 ## Usage
 Append the following to your VM IP address running ```Apache``` to streamline the rendering process:
 
