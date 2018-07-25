@@ -193,4 +193,7 @@ where ```xyz``` is account name previously owning ```gis``` database (something 
 
 ### Usage
 Append the following to your VM IP address running ```Apache``` to streamline the rendering process:
-```hot/14/9214/5456.png```
+
+```
+hot/14/9214/5456.png
+```
