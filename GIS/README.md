@@ -3,8 +3,13 @@
 ## Objectives
 Import GIS data (OSM PBF format) into ```PostgreSQL``` and ```elasticsearch``` and try to do some 2D/3D rendering.
 
+
 ## Introduction
 The following guide should be quite precise however it is made of several external sources so there might be slight inconsistencies. First imported OSM PBF data into database and then installed all the rendering software.
+
+## Notice
+Please note that ```sudo``` is deliberately omitted and you should know when to use is.
+
 
 ## OS installation
 Running on ```HP Pavilion x2 with Intel(R) Atom(TM) CPU Z3736F@ 1.33GHz``` with  ```2GB``` of RAM. Install ```VirtualBox```. Download ```ubuntu-18.04-live-server-amd64``` ISO image and install it as VM. You need to switch to bridged networking in order to get access to services running in the VM. 
