@@ -1,5 +1,8 @@
 # GIS
 
+## Objectives
+Import GIS data (OSM PBF format) into ```PostgreSQL``` and ```elasticsearch``` and try to do some 2D/3D rendering.
+
 ## Introduction
 The following guide should be quite precise however it is made of several external sources so there might be slight inconsistencies. First imported OSM PBF data into database and then installed all the rendering software.
 
