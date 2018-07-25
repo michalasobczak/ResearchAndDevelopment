@@ -191,7 +191,7 @@ REASSIGN OWNED BY xyz TO renderaccount
 
 where ```xyz``` is account name previously owning ```gis``` database (something like your regular user account).
 
-### Usage
+## Usage
 Append the following to your VM IP address running ```Apache``` to streamline the rendering process:
 
 ```
