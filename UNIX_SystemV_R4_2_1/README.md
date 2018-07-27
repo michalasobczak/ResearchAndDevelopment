@@ -1,7 +1,7 @@
-# UNIX SystemV R4 2.1
+# UNIX System V R4 2.1
 
 ## Objectives
-Up and running legacy operating system with regular utilities available as well as C compiler and possibly other development tools.
+Up and running legacy operating system with regular utilities available as well as C compiler and possibly other things.
 
 ## Installation
 Diskettes can be found on the internet. It runs fine on ```VirtualBox``` but please note that there is 500MB hard disk drive limitation. I set up 64MB or RAM. There are 10 main installation floppies, 2 additional for maintenance (?) and 1 for editing utilities which is only ```ed``` to be precise. In regular installation there is ```vi``` so we are good to go with editing files.
