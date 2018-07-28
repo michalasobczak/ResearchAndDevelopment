@@ -8,6 +8,7 @@ Diskettes can be found on the internet. It runs fine on ```VirtualBox``` but ple
 
 # Startup
 After powering up VM you will get the following screen:
+
 ![Screenshot](img/02_welcome.PNG)
 
 ## License
