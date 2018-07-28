@@ -5,8 +5,12 @@ Place acting as programming playground with various experiments and other effort
 ## WebGL
 WebGL, three.js
 
-## Ruby on Rails
-Sample application with the most common and desired features.
+![Screenshot](WebGL/img/01_startup.png)
 
 ## GIS
 OpenStreetMap experiments.
+
+![Screenshot](GIS/img/01_map.png)
+
+## Ruby on Rails
+Sample application with the most common and desired features.
