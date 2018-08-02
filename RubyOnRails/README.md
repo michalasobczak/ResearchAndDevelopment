@@ -1,3 +1,7 @@
 # Ruby on Rails
 
-Work in progress...
+## Ruby
+Introduction to the language by example
+
+## Rails
+Sample application.
