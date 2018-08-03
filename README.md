@@ -16,4 +16,4 @@ OpenStreetMap experiments.
 Bringing legacy OS to life.
 
 ## Ruby on Rails
-Sample applications with the most common and desired features. Covering also OpenShift Origin and microservices architecture.
+Sample applications with the most common and desired features. Covering also OpenShift Origin and microservices architecture. It is corresponding repository to the work-in-progress book.
