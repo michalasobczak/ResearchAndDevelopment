@@ -3,5 +3,5 @@
 ## Ruby
 Introduction to the language by example.
 
-## Rails
-Sample application.
+## openshift-ansible
+Ansible playbook for installing OpenShift Origin 3.7
