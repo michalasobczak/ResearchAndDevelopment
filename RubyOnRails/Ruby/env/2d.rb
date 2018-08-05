@@ -1,4 +1,10 @@
 #***************************
+# LIBRARIES                  
+#***************************
+load 'env\line.rb'
+
+
+#***************************
 # DATA
 #***************************
 $pixel_map = [[0x01, 0x08],
@@ -8,6 +14,8 @@ $pixel_map = [[0x01, 0x08],
 $braille_char_offset = 0x2800
 $SIZE=50
 $screen_map=Array.new($SIZE){Array.new($SIZE,$braille_char_offset)}
+$current_x=0
+$current_y=0
 
 
 #***************************
@@ -44,6 +52,20 @@ def put_pixel(x,y)
   $screen_map[coords[1]][coords[0]] |= $pixel_map[y % 4][x % 2]
 end
 
+
+#
+# FUNCTION
+#   put_cursor_at
+# PARAMETERS
+#   x
+#   y
+# RETURNING
+#   none*
+#
+def put_cursor_at(x,y)
+  $current_x = x
+  $current_y = y
+end
 
 #
 # FUNCTION
