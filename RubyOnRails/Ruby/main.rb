@@ -2,6 +2,7 @@
 # LIBRARIES                  
 #***************************
 load 'env\3d.rb'
+load 'env\2d.rb'
 
 
 #***************************
@@ -53,13 +54,18 @@ cube_faces = [
 #***************************
 #
 while true do
+  clear_screen
+  #
+  puts "=> DATA"
+  #
   # VERTICES CALCULATION
   for vi in (0..(cube_vertices.size-3)).step(3)
     x2 = start_x+cube_vertices[vi+0]
     y2 = start_y+cube_vertices[vi+1]
     z2 = start_z+cube_vertices[vi+2]
     point = transform_3_into_2(x2,y2,z2, camera_x,camera_y,camera_z, th)
-    #printf("%d,%d,%d => %d x %d\n", x2,y2,z2, point[:x],point[:y])
+    printf("%d,%d,%d => %d x %d\n", x2,y2,z2, point[:x],point[:y])
+    put_pixel(point[:x]/10,point[:y]/10)
     cube_2d[vc+0] = point[:x]
     cube_2d[vc+1] = point[:y]
     vc+=2
@@ -72,4 +78,10 @@ while true do
     y3 = cube_2d[fc+1];
   end
   #
+  puts "=> SCREEN"
+  #
+  draw_screen
+  
+  start_x = start_x + 10
+  sleep 0.4
 end # while
