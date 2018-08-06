@@ -12,10 +12,12 @@ $pixel_map = [[0x01, 0x08],
               [0x04, 0x20],
               [0x40, 0x80]]             
 $braille_char_offset = 0x2800
-$SIZE=50
+$SIZE=100
+$V_FACTOR=4
 $screen_map=Array.new($SIZE){Array.new($SIZE,$braille_char_offset)}
 $current_x=0
 $current_y=0
+$screen_memory = ''
 
 
 #***************************
@@ -35,7 +37,7 @@ def get_pos(x,y)
   _x = x
   _y = y
   return [_x/2,_y/4]
-end             
+end # get_pos 
 
 
 #
@@ -50,7 +52,7 @@ end
 def put_pixel(x,y)
   coords = get_pos(x,y)
   $screen_map[coords[1]][coords[0]] |= $pixel_map[y % 4][x % 2]
-end
+end # put_pixel
 
 
 #
@@ -65,7 +67,7 @@ end
 def put_cursor_at(x,y)
   $current_x = x
   $current_y = y
-end
+end # put_cursor_at
 
 #
 # FUNCTION
@@ -77,9 +79,22 @@ end
 #
 def draw_horizontal_border()
   ($SIZE+2).times do 
-    print "-"
-  end
-end
+    $screen_memory = $screen_memory + '*'
+  end # times
+end #draw_horizontal_border
+
+
+#
+# FUNCTION
+#   draw_new_line
+# PARAMETERS
+#   none
+# RETURNING
+#   printing new line
+#
+def draw_new_line()
+  $screen_memory = $screen_memory + "\n"
+end # draw_new_line
 
 
 #
@@ -92,16 +107,17 @@ end
 #
 def draw_screen()
   draw_horizontal_border
-  puts
-  ($SIZE/2).times do |r|
-    print "|"
+  draw_new_line
+  ($SIZE/$V_FACTOR).times do |r|
+    $screen_memory = $screen_memory + '*'
     $SIZE.times do |c|
-      print $screen_map[r][c].chr("utf-8")
-    end
-    puts "|"
-  end
+      $screen_memory = $screen_memory + $screen_map[r][c].chr("utf-8")
+    end # times
+    $screen_memory = $screen_memory + "*\n"
+  end # times
   draw_horizontal_border
-end
+  puts $screen_memory
+end # draw_screen
 
 
 #
@@ -114,5 +130,6 @@ end
 #
 def clear_screen
   $screen_map=Array.new($SIZE){Array.new($SIZE,$braille_char_offset)}
-  puts "\e[H\e[2J"
-end
+  print "\e[H\e[2J"
+  $screen_memory = ''
+end # clear_screen

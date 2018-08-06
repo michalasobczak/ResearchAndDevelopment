@@ -1,50 +1,48 @@
+#***************************
+# FUNCTIONS 
+#***************************
+
 #
-# Bresenham's line algorithm
-#   integer only
-#   IBM 1962
+# FUNCTION
+#   print_line_to
+# PARAMETERS
+#   x1
+#   y1
+#   x0*,y0*
+# RETURNING
+#   printing characters
 #
-def print_line_from_to(x0,y0, x1,y1)
-  dx = x1 - x0
-  dy = y1 - y0
-  d = (2*dy) - dx
-  y = y0
-
-  (x0..x1).each do |x|
-    puts "#{x} x #{y}" 
-    put_pixel(x/4,y/2)
-    if d > 0
-       y = y + 1
-       d = d - (2*dx)
-    end
-    d = d + (2*dy)
-  end
-end
-
-
 def print_line_to(x1,y1)
   x0 = $current_x.to_i
-  y0 = $current_y.to_i
-  
-  print_line_from_to(x0,y0, x1,y1)
-  
+  y0 = $current_y.to_i  
+  print_line(x0.to_f,y0.to_f, x1.to_f,y1.to_f)  
   $current_x = x1
   $current_y = y1
-end
+end # print_line_to
+
 
 #
+# FUNCTION
+#   print_line
+# PARAMETERS
+#   x0
+#   y0
+#   x1
+#   y1
+# RETURNING
+#   printing characters
 #
-#
-def get_line(x0,x1,y0,y1)
+def print_line(x0,y0,x1,y1)
   points = []
   steep = ((y1-y0).abs) > ((x1-x0).abs)
   if steep
     x0,y0 = y0,x0
     x1,y1 = y1,x1
-  end
+  end # if
   if x0 > x1
     x0,x1 = x1,x0
     y0,y1 = y1,y0
-  end
+  end # if
   deltax = x1-x0
   deltay = (y1-y0).abs
   error = (deltax / 2).to_i
@@ -54,20 +52,19 @@ def get_line(x0,x1,y0,y1)
     ystep = 1
   else
     ystep = -1
-  end
-  for x in x0..x1
+  end # if
+  for x in (x0.to_i)..(x1.to_i)
     if steep
       points << {:x => y, :y => x}
     else
       points << {:x => x, :y => y}
-    end
+    end # if
+    put_pixel(points[points.size-1][:x]/4,points[points.size-1][:y]/4)
     error -= deltay
     if error < 0
       y += ystep
       error += deltax
-    end
-  end
+    end # if
+  end # for
   return points
-end
-
-
+end # get_line
