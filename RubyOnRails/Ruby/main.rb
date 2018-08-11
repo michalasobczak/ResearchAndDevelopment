@@ -65,7 +65,6 @@ while true do
     point = transform_3_into_2(x2,y2,z2, camera_x,camera_y,camera_z, th)
     point[:x] = point[:x].to_i
     point[:y] = point[:y].to_i
-    #printf("%d,%d,%d => %d x %d\n", x2,y2,z2, point[:x],point[:y])
     put_pixel(point[:x]/10,point[:y]/10)
     cube_2d[vc+0] = point[:x]
     cube_2d[vc+1] = point[:y]
@@ -75,7 +74,6 @@ while true do
   # FACES  
   initial_x = cube_2d[2]
   initial_y = cube_2d[3] 
-  #puts "initial_ = " + initial_x.to_s + " x " + initial_y.to_s
   put_cursor_at(initial_x, initial_y)
   for fi in (1..(cube_faces.size-1)).step(1)
     fc = (cube_faces[fi]*2)-2;
