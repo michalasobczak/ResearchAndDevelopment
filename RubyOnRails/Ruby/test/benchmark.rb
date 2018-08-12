@@ -6,7 +6,7 @@ N = 100_000_000
 
 class BenchmarkTest < Minitest::Test
 
-  def test_addition
+  def test_addition_integer
     i = 1
     time = Benchmark.realtime do
       N.times do
