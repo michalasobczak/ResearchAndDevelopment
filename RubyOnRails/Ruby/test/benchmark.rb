@@ -14,7 +14,7 @@ class BenchmarkTest < Minitest::Test
       end
     end    
     puts time.to_s
-    assert_equals i, 200_000_001
+    assert_equal i, 200_000_001
   end # test_addition
   
 end
