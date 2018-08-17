@@ -1,8 +1,8 @@
 #***************************
 # LIBRARIES                  
 #***************************
-load 'env\3d.rb'
-load 'env\2d.rb'
+load 'env/3d.rb'
+load 'env/2d.rb'
 require 'benchmark'
 
 
