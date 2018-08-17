@@ -89,10 +89,9 @@ cube_faces = [
     #
     start_x = start_x + 10
     start_y = start_y - 5
-    #sleep 0.02
+    if ARGV[0].to_s == "runtime" then sleep 0.02 end
     clear_screen
   end # benchmark 
-  #puts time
   measures << time
 end # while
 
