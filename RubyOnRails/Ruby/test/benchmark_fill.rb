@@ -1,3 +1,5 @@
+require 'get_process_mem'
+
 mem_i = GetProcessMem.new
 puts mem_i.inspect
 
