@@ -6,8 +6,7 @@ option = ARGV[0].to_i
 
 if option == 1 then
   N.times do
-    i = i + 1
-    arr << 1  
+    arr << 1
   end
 elsif option == 2
   N.times do  
@@ -16,6 +15,6 @@ elsif option == 2
 elsif option == 3
   N.times do    
     i+=1
-    arr << 1  
+    arr[i] = 1
   end
 end

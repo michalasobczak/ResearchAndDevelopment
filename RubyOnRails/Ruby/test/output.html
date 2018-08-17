@@ -1,0 +1,422 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <style media="all" type="text/css">
+    table {
+      border-collapse: collapse;
+      border: 1px solid #CCC;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 9pt;
+      line-height: normal;
+      width: 100%;
+    }
+
+    th {
+      text-align: center;
+      border-top: 1px solid #FB7A31;
+      border-bottom: 1px solid #FB7A31;
+      background: #FFC;
+      padding: 0.3em;
+      border-left: 1px solid silver;
+    }
+
+    tr.break td {
+      border: 0;
+      border-top: 1px solid #FB7A31;
+      padding: 0;
+      margin: 0;
+    }
+
+    tr.method td {
+      font-weight: bold;
+    }
+
+    td {
+      padding: 0.3em;
+    }
+
+    td:first-child {
+      width: 190px;
+      }
+
+    td {
+      border-left: 1px solid #CCC;
+      text-align: center;
+    }
+
+    .method_name {
+      text-align: left;
+    }
+
+    tfoot td {
+      text-align: left;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>Profile Report: wall_time</h1>
+    <!-- Threads Table -->
+    <table>
+      <tr>
+        <th>Thread ID</th>
+        <th>Fiber ID</th>
+        <th>Total Time</th>
+      </tr>
+
+      <tr>
+        <td>10303104</td>
+        <td><a href="#15113076">15113076</a></td>
+        <td>30.0096378326416</td>
+      </tr>
+
+    </table>
+    <!-- Methods Tables -->
+
+      <h2><a name="15113076">Thread 10303104, Fiber: 15113076</a></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>%Total</th>
+            <th>%Self</th>
+            <th>Total</th>
+            <th>Self</th>
+            <th>Wait</th>
+            <th>Child</th>
+            <th>Calls</th>
+            <th class="method_name">Name</th>
+            <th>Line</th>
+          </tr>
+        </thead>
+        <tbody>
+
+               <!-- Parents -->
+
+               <tr class="method">
+                 <td>100.00%</td>
+                 <td>0.00%</td>
+                 <td>30.01</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>30.01</td>
+                 <td>2</td>
+                 <td class="method_name">
+                   <a name="[global]_[no method]_15113076">
+                      [global]#[no method]
+                   </a>
+                 </td>
+                 <td><a href="file://D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb#1" title="D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb:1">1</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>30.01</td>
+                   <td>17.95</td>
+                   <td>0.00</td>
+                   <td>12.06</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#Integer_times_15113076">Integer#times</a></td>
+                   <td><a href="file://D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb#16" title="D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb:16">16</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#Array_[]_15113076">Array#[]</a></td>
+                   <td><a href="file://D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb#5" title="D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb:5">5</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/3</td>
+                   <td class="method_name"><a href="#Integer____15113076">Integer#==</a></td>
+                   <td><a href="file://D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb#15" title="D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb:15">15</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#String_to_i_15113076">String#to_i</a></td>
+                   <td><a href="file://D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb#5" title="D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb:5">5</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>30.01</td>
+                   <td>17.95</td>
+                   <td>0.00</td>
+                   <td>12.06</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#[global]_[no method]_15113076">[global]#[no method]</a></td>
+                   <td><a href="file://D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb#16" title="D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb:16">16</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>100.00%</td>
+                 <td>59.82%</td>
+                 <td>30.01</td>
+                 <td>17.95</td>
+                 <td>0.00</td>
+                 <td>12.06</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="Integer_times_15113076">
+                      Integer#times
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>6.49</td>
+                   <td>6.49</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>10000000/10000000</td>
+                   <td class="method_name"><a href="#Array_[]__15113076">Array#[]=</a></td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>5.57</td>
+                   <td>5.57</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>10000000/10000000</td>
+                   <td class="method_name"><a href="#Integer_+_15113076">Integer#+</a></td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>6.49</td>
+                   <td>6.49</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>10000000/10000000</td>
+                   <td class="method_name"><a href="#Integer_times_15113076">Integer#times</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>21.62%</td>
+                 <td>21.62%</td>
+                 <td>6.49</td>
+                 <td>6.49</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>10000000</td>
+                 <td class="method_name">
+                   <a name="Array_[]__15113076">
+                      Array#[]=
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>5.57</td>
+                   <td>5.57</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>10000000/10000000</td>
+                   <td class="method_name"><a href="#Integer_times_15113076">Integer#times</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>18.56%</td>
+                 <td>18.56%</td>
+                 <td>5.57</td>
+                 <td>5.57</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>10000000</td>
+                 <td class="method_name">
+                   <a name="Integer_+_15113076">
+                      Integer#+
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+               <tr class="method">
+                 <td>0.00%</td>
+                 <td>0.00%</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>2</td>
+                 <td class="method_name">
+                   <a name="IO_set_encoding_15113076">
+                      IO#set_encoding
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#[global]_[no method]_15113076">[global]#[no method]</a></td>
+                   <td><a href="file://D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb#5" title="D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb:5">5</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>0.00%</td>
+                 <td>0.00%</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="String_to_i_15113076">
+                      String#to_i
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#[global]_[no method]_15113076">[global]#[no method]</a></td>
+                   <td><a href="file://D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb#5" title="D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb:5">5</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>0.00%</td>
+                 <td>0.00%</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="Array_[]_15113076">
+                      Array#[]
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/3</td>
+                   <td class="method_name"><a href="#[global]_[no method]_15113076">[global]#[no method]</a></td>
+                   <td><a href="file://D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb#15" title="D:/repos/ResearchAndDevelopment/RubyOnRails/Ruby/test/benchmark_prof.rb:15">15</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>0.00%</td>
+                 <td>0.00%</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>3</td>
+                 <td class="method_name">
+                   <a name="Integer____15113076">
+                      Integer#==
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="9">* indicates recursively called methods</td>
+          </tr>
+        </tfoot>
+      </table>
+
+  </body>
+</html>
