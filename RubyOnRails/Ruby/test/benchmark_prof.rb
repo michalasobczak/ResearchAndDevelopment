@@ -1,4 +1,4 @@
-N = 10_000_000
+N = 100_000_000
 i = 0
 arr = []
 
@@ -16,5 +16,9 @@ elsif option == 3
   N.times do    
     i+=1
     arr[i] = 1
+  end
+elsif option == 4
+  N.times do    
+    arr.push(1)
   end
 end
