@@ -5,17 +5,6 @@ require 'benchmark'
 load 'sort.rb'
 
 #***************************
-# FUNCTIONS 
-#***************************
-def sel_print_sorted_arr(sorted)
-  puts '-> ' + sorted[0].to_s
-  puts '-> ' + sorted[1].to_s
-  puts '-> ' + sorted[sorted.size-2].to_s
-  puts '-> ' + sorted[sorted.size-1].to_s
-end
-
-
-#***************************
 # DATA                  
 #***************************
 processes_no = 4
