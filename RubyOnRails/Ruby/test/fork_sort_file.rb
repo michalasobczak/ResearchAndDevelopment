@@ -3,11 +3,13 @@
 #***************************
 require 'benchmark'
 load 'sort.rb'
+load 'sort_insertion.rb'
+load 'merge_arrays.rb'
 
 #***************************
 # DATA                  
 #***************************
-processes_no = 4
+processes_no = 2
 arr_size = 10000
 option = ARGV[0].to_s
 $sort_index = 0
@@ -48,7 +50,7 @@ time2 = Benchmark.realtime do
       start = 0
       if index > 0 then start = step*(index)+index end 
       finish = step*(index+1)+index
-      res = quicksort(arr[start..finish], 0, step).to_s + '+'
+      res = quicksort(arr[start..finish], 0, step).to_s + ','
       File.open("tmp/#{$$}", 'w') { |file| file.write(res) }
     end
     pids << pid
@@ -61,7 +63,8 @@ time2 = Benchmark.realtime do
     File.delete(path)
   end
   pre_sorted = pre_sorted + '[]'
-  sorted = quicksort(eval(pre_sorted), 0, arr_size-1)
+  arrays = eval('[' + pre_sorted + ']')
+  sorted = merge_arrays(arrays[0], arrays[1])
 end
 sel_print_sorted_arr(sorted)
 puts 'time2=' + time2.to_s
