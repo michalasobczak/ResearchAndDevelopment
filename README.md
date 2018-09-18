@@ -5,8 +5,6 @@ Place acting as programming playground with various experiments and other effort
 ## WebGL
 WebGL, three.js
 
-![Screenshot](WebGL/img/01_startup.png)
-
 ## GIS
 OpenStreetMap experiments.
 
@@ -15,5 +13,3 @@ OpenStreetMap experiments.
 ## UNIX System V R4 2.1
 Bringing legacy OS to life.
 
-## Ruby on Rails
-Sample applications with the most common and desired features. Covering also OpenShift Origin and microservices architecture. It is corresponding repository to the work-in-progress book.
