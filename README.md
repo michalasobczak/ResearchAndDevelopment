@@ -8,8 +8,6 @@ WebGL, three.js
 ## GIS
 OpenStreetMap experiments.
 
-![Screenshot](GIS/img/01_map.png)
-
 ## UNIX System V R4 2.1
 Bringing legacy OS to life.
 
